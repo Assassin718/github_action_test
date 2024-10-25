@@ -32,6 +32,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
       - name: change file
         run: |
           chmod +x ./scripts/add_line.sh
