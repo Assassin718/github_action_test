@@ -22,6 +22,8 @@ on:
 jobs:
   CI:
     # if: github.event.pull_request.merged == true
+    permissions:
+      contents: write
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 60
     strategy:
