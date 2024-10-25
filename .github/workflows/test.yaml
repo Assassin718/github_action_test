@@ -46,6 +46,8 @@ jobs:
       
       - name: Push benchmark result
         run: |
+          git config --global user.email "no-reply@gmail.com"
+          git config --global user.name "github-action-bot"
           git config pull.rebase true
           git pull origin gh-pages
           git push 'https://Assassin718:${{ secrets.GITHUB_TOKEN }}@github.com/Assassin718/github_action_test.git' gh-pages:gh-pages
