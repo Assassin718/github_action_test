@@ -46,6 +46,7 @@ jobs:
       
       - name: Push benchmark result
         run: |
+          git pull origin gh-pages
           git push 'https://Assassin718:${{ secrets.GITHUB_TOKEN }}@github.com/Assassin718/github_action_test.git' gh-pages:gh-pages
 
   result:
