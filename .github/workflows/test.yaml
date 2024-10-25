@@ -17,7 +17,7 @@ name: Benchmark
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   CI:
