@@ -50,7 +50,9 @@ jobs:
           git -c user.name=github-action-benchmark -c user.email=github@users.noreply.github.com commit --amend -m "addline"
       
       - name: Push benchmark result
-        run: git push 'https://Assassin718:${{ secrets.GITHUB_TOKEN }}@github.com/Assassin718/github_action_test.git' gh-pages:gh-pages
+        run: |
+          git pull origin gh-pages
+          git push 'https://Assassin718:${{ secrets.GITHUB_TOKEN }}@github.com/Assassin718/github_action_test.git' gh-pages:gh-pages
 
   result:
     runs-on: ubuntu-latest
